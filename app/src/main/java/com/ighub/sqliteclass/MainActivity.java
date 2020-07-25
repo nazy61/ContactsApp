@@ -45,6 +45,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void proceed() {
-        db.addContact(new ContactModel());
+        db.addContact(fName, lName, email, phone);
     }
 }
