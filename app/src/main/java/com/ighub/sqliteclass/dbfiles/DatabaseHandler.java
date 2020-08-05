@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
@@ -32,6 +33,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         db.execSQL(CREATE_CONTACTS_TABLE);
 
+
     }
 
     @Override
@@ -46,6 +48,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
+        values.put(COLUMN_ID, model.getId());
         values.put(COLUMN_FIRSTNAME, model.getFname());
         values.put(COLUMN_LASTNAME, model.getLname());;
         values.put(COLUMN_EMAIL, model.getEmail());
