@@ -72,7 +72,15 @@
             android:layout_marginTop="20dp"
             android:text="Login"/>
 
-    </LinearLayout>
+        <Button
+            android:id="@+id/btnGetDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/black"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="20dp"
+            android:text="Get Details"/>
 
+    </LinearLayout>
 
 </LinearLayout>
